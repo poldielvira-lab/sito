@@ -69,7 +69,7 @@ function addPhoto(box,key){box.replaceChildren();box.classList.remove('mockup-wi
  if(key==='wiva') {box.classList.add('mockup-wiva'); const laptop=element('div','laptop'), screen=element('div','laptop-screen'),base=element('div','laptop-base'); const img=element('img');img.src=paths[key];img.alt='Wiva';screen.append(img);laptop.append(screen,base);box.append(laptop);return;}
  if(key==='elle')box.classList.add('project-elle-photo');
  if(key==='castel')box.classList.add('project-castel-photo');
- const img=element('img');img.src=paths[key];img.alt=key==='hero'?'Ritratto di Elvira':key==='about'?'Elvira al lavoro':key==='elle'?'Elle Hub':'C’entro Castel';box.append(img);if(key==='hero')box.append(element('span','photo-sticker','freelance, curiosa'));
+ const img=element('img');img.src=paths[key];img.alt=key==='hero'?'Ritratto di Elvira':key==='about'?'Elvira al lavoro':key==='elle'?'Elle Hub':'C’entro Castel';box.append(img);
 }
 function render(){
  document.querySelectorAll('[data-text]').forEach(n=>n.textContent=data[n.dataset.text]||'');
