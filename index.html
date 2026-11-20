@@ -38,7 +38,7 @@
 @media(prefers-reduced-motion:reduce){.laptop,.gift-card{transition:none}}
 </style></head><body>
 <header class="top"><a class="wordmark" href="#top">Elvira Poldi<span>✳</span></a><nav><a href="#about">About</a><a href="#progetti">Progetti</a><a href="#contatti">Contatti</a></nav></header>
-<main id="top"><section class="hero wrap"><div><div class="eyebrow">CIAO, SONO ELVIRA <span class="star">✳</span></div><h1><span data-text="heroA"></span><em data-text="heroB"></em></h1></div><div class="hero-visual image-slot" data-image="hero" aria-label="Fotografia personale"><div class="image-placeholder"><span>Una foto di te, qui.</span><small>01 / RITRATTO</small></div><span class="photo-sticker">freelance, curiosa</span></div></section>
+<main id="top"><section class="hero wrap"><div><div class="eyebrow">CIAO, SONO ELVIRA <span class="star">✳</span></div><h1><span data-text="heroA"></span><em data-text="heroB"></em></h1></div><div class="hero-visual image-slot" data-image="hero" aria-label="Fotografia personale"><div class="image-placeholder"><span>Una foto di te, qui.</span><small>01 / RITRATTO</small></div></div></section>
 <section class="about-section" id="about"><div class="wrap two-col"><div><div class="eyebrow">01 / QUALCOSA SU DI ME</div><h2>Piacere, <em>Elvira.</em></h2><div class="bodycopy" data-text="about"></div></div><div class="about-art"><div class="image-slot portrait" data-image="about"><div class="image-placeholder"><span>Un momento di lavoro</span><small>02 / DIETRO LE QUINTE</small></div></div></div></div></section>
 <section class="services"><div class="wrap"><div class="eyebrow">02 / COSA FACCIO</div><h2>Di cosa mi occupo <em>nella pratica.</em></h2><div class="service-line"><span>01</span><h3>Comunicazione<br>e contenuti</h3><p data-text="service1"></p></div><div class="service-line"><span>02</span><h3>Marketing<br>digitale</h3><p data-text="service2"></p></div><div class="service-line"><span>03</span><h3>Progetti e<br>collaborazioni</h3><p data-text="service3"></p></div></div></section>
 <section class="projects wrap" id="progetti"><div class="eyebrow">03 / PROGETTI SELEZIONATI</div><h2>Alcune cose a cui <em>sto lavorando.</em></h2><p class="section-intro">Progetti personali, collaborazioni e idee che stanno prendendo forma.</p><div id="projectGrid" class="project-grid"></div></section>
@@ -63,7 +63,7 @@
 };
 
 const data = DEFAULTS;
-const paths = {hero:'elvira-hero.webp',about:'work-photo.webp',wiva:'wiva-screen.png',elle:'elle-hub-photo.webp',castel:'castel-gift-card.webp'};
+const paths = {hero:'elvira-hero.webp',about:'work-photo.webp',wiva:'wiva-screen.png',elle:'elle-hub-photo.webp',castel:'castel-two-cards.webp'};
 function element(tag,cls,content){const e=document.createElement(tag);if(cls)e.className=cls;if(content)e.textContent=content;return e;}
 function addPhoto(box,key){box.replaceChildren();box.classList.remove('mockup-wiva','project-elle-photo','mockup-castel','project-castel-photo');
  if(key==='wiva') {box.classList.add('mockup-wiva'); const laptop=element('div','laptop'), screen=element('div','laptop-screen'),base=element('div','laptop-base'); const img=element('img');img.src=paths[key];img.alt='Wiva';screen.append(img);laptop.append(screen,base);box.append(laptop);return;}
